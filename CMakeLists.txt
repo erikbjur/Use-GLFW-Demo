@@ -7,3 +7,7 @@ add_subdirectory(glfw)
 add_executable(MyApp main.cpp)
 
 target_link_libraries(MyApp glfw)
+
+find_package(OpenGL REQUIRED)
+
+target_link_libraries(MyApp OpenGL::GL)
